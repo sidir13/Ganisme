@@ -56,12 +56,11 @@ st.write(
     "Sélectionnez le nombre d'images à générer et visualisez-les instantanément. "
     "Le modèle est chargé depuis les poids entraînés existants."
 )
-
+model_epoch =100
+latent_dim =100
+model_subdir = 'v20_dynamic_gpu_safe'
 with st.sidebar:
     st.header("Paramètres")
-    model_epoch = st.number_input("Époque du modèle", min_value=1, value=100, step=1)
-    latent_dim = st.number_input("Dimension du latent", min_value=1, value=100, step=1)
-    model_subdir = st.text_input("Sous-dossier du modèle", value=DEFAULT_MODEL_SUBDIR)
     num_images = st.slider("Nombre d'images", min_value=1, max_value=64, value=16)
     columns = st.slider("Colonnes d'affichage", min_value=1, max_value=8, value=4)
 
