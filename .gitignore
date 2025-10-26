@@ -9,3 +9,8 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+
+
+!src/data/model/v20_dynamic_gpu_safe/G_epoch_100.pth
+
+
